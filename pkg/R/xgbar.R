@@ -110,6 +110,7 @@ xgbar <- function(y, xreg = NULL, maxlag = max(8, 2 * frequency(y)), nrounds = 1
                   orign - f - round(f / 4),
                   "instead."))
     maxlag <- round(orign - f - round(f / 4))
+    print(maxlag)
   }
   
   origxreg <- xreg
