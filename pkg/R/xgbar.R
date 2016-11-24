@@ -109,8 +109,9 @@ xgbar <- function(y, xreg = NULL, maxlag = max(8, 2 * frequency(y)), nrounds = 1
     warning(paste("y is too short for", maxlag, "to be the value of maxlag.  Reducing maxlags to", 
                   orign - f - round(f / 4),
                   "instead."))
-    maxlag <- orign - f - round(f / 4)
+    maxlag <- round(orign - f - round(f / 4)) # Edited to include round() function
   }
+  
   
   origxreg <- xreg
   n <- orign - maxlag
